@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rpg ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="computador" aria-label="Computadorzinho do RPG">
+
+    <div class="moldura">
+      <div class="tela">
+
+        <div class="area" id="area">
+          <p class="balao" id="mensagem">
+            oii! bem-vinde ao meu rpg ♡ clique numa pasta ou digite o nome dela e aperte
+            <u>enter</u> ou <u>send</u> pra navegar!
+          </p>
+
+          <nav class="pastas" aria-label="Pastas">
+            <button class="pasta" data-pasta="regras">
+              <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
+              <span>regras</span>
+            </button>
+            <button class="pasta" data-pasta="lore">
+              <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
+              <span>lore</span>
+            </button>
+            <button class="pasta" data-pasta="funciona">
+              <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
+              <span>como funciona</span>
+            </button>
+          </nav>
+        </div>
+
+        <section class="janela" id="janela-regras" hidden>
+          <header class="barra">
+            <span class="titulo">♡ regras</span>
+            <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
+          </header>
+          <div class="corpo">
+            <h2>regras do rpg</h2>
+            <ol class="lista">
+              <li>Lorem ipsum dolor sit amet, regra número um.</li>
+              <li>Consectetur adipiscing elit, regra número dois.</li>
+              <li>Sed do eiusmod tempor, regra número três.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="janela" id="janela-lore" hidden>
+          <header class="barra">
+            <span class="titulo">♡ lore</span>
+            <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
+          </header>
+          <div class="corpo">
+            <h2>a lore do rpg</h2>
+            <p class="balao pequeno">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aqui vai a lore do RPG: como tudo começou e o que une todas as personagens.</p>
+            <p class="balao pequeno">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Segredos, mistérios, acontecimentos importantes...</p>
+          </div>
+        </section>
+
+        <section class="janela" id="janela-funciona" hidden>
+          <header class="barra">
+            <span class="titulo">♡ como funciona</span>
+            <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
+          </header>
+          <div class="corpo">
+            <h2>como vai funcionar</h2>
+            <p class="balao pequeno">Lorem ipsum dolor sit amet. Explique aqui como o RPG acontece: onde se joga, quem narra, como entrar, turnos, dados, frequência das sessões...</p>
+          </div>
+        </section>
+
+        <form class="envio" id="envio" autocomplete="off">
+          <span class="mais" aria-hidden="true">+</span>
+          <span class="coracao" aria-hidden="true">♥</span>
+          <input type="text" id="campo" placeholder="type message..." inputmode="none"
+                 aria-label="Digite o nome de uma pasta" autocapitalize="off" spellcheck="false">
+          <button type="submit" class="enviar">Send</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="dobradica" aria-hidden="true"></div>
+
+    <div class="teclado" id="teclado" role="group" aria-label="Teclado"></div>
+
+  </main>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icone-pasta" viewBox="0 0 64 52">
+      <path d="M4 10a6 6 0 0 1 6-6h14l6 7h24a6 6 0 0 1 6 6v27a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6z" fill="#ff9fba"/>
+      <path d="M4 20a6 6 0 0 1 6-6h44a6 6 0 0 1 6 6v21a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6z" fill="#ffc7d6"/>
+      <path d="M32 40.5 24.4 33a5.1 5.1 0 0 1 7.6-6.7 5.1 5.1 0 0 1 7.6 6.7z" fill="#fff"/>
+    </symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
