@@ -5,7 +5,7 @@ const mensagem = document.getElementById("mensagem");
 const area = document.getElementById("area");
 
 const textoInicial = mensagem.innerHTML;
-const pastas = ["regras", "lore", "funciona"];
+const pastas = ["lore"];
 
 function normalizar(texto) {
   return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
@@ -38,8 +38,7 @@ document.addEventListener("keydown", (e) => {
 
 envio.addEventListener("submit", (e) => {
   e.preventDefault();
-  let digitado = normalizar(campo.value);
-  if (digitado === "como funciona") digitado = "funciona";
+  const digitado = normalizar(campo.value);
   if (!digitado) return;
 
   if (pastas.includes(digitado)) {
@@ -47,7 +46,7 @@ envio.addEventListener("submit", (e) => {
   } else {
     fecharTudo();
     mensagem.textContent =
-      "hmm, não achei a pasta \"" + campo.value.trim() + "\" ♡ tenta: regras, lore ou como funciona";
+      "hmm, não achei a pasta \"" + campo.value.trim() + "\" ♡ tenta: lore";
     area.scrollTop = 0;
     campo.value = "";
   }
@@ -105,3 +104,18 @@ document.addEventListener("keyup", (e) => {
   const tecla = acharTecla(e.key);
   if (tecla) tecla.classList.remove("apertada");
 });
+
+const paginasLore = document.querySelectorAll("#janela-lore .pagina");
+const numerosLore = document.querySelectorAll("#janela-lore .pag-num");
+let paginaAtual = 0;
+
+function irParaPagina(n) {
+  paginaAtual = Math.max(0, Math.min(paginasLore.length - 1, n));
+  paginasLore.forEach((p, i) => (p.hidden = i !== paginaAtual));
+  numerosLore.forEach((b, i) => b.classList.toggle("ativa", i === paginaAtual));
+  document.getElementById("corpo-lore").scrollTop = 0;
+}
+
+numerosLore.forEach((b) => b.addEventListener("click", () => irParaPagina(Number(b.dataset.ir))));
+document.getElementById("pag-anterior").addEventListener("click", () => irParaPagina(paginaAtual - 1));
+document.getElementById("pag-proxima").addEventListener("click", () => irParaPagina(paginaAtual + 1));
