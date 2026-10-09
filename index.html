@@ -3,74 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rpg ♡</title>
+  <title>meu rpg ♡</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <main class="computador" aria-label="Computadorzinho do RPG">
 
+    <h1 class="titulo-site">Ivory Hall</h1>
+
     <div class="moldura">
       <div class="tela">
 
         <div class="area" id="area">
           <p class="balao" id="mensagem">
-            oii! bem-vinde ao meu rpg ♡ clique numa pasta ou digite o nome dela e aperte
-            <u>enter</u> ou <u>send</u> pra navegar!
+            oii! bem-vinde ao meu rpg ♡ clique na pasta lore pra abrir!
           </p>
 
           <nav class="pastas" aria-label="Pastas">
-            <button class="pasta" data-pasta="regras">
-              <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
-              <span>regras</span>
-            </button>
             <button class="pasta" data-pasta="lore">
               <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
               <span>lore</span>
             </button>
-            <button class="pasta" data-pasta="funciona">
-              <svg class="icone" viewBox="0 0 64 52" aria-hidden="true"><use href="#icone-pasta"/></svg>
-              <span>como funciona</span>
-            </button>
           </nav>
         </div>
-
-        <section class="janela" id="janela-regras" hidden>
-          <header class="barra">
-            <span class="titulo">♡ regras</span>
-            <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
-          </header>
-          <div class="corpo">
-            <h2>regras do rpg</h2>
-            <ol class="lista">
-              <li>Lorem ipsum dolor sit amet, regra número um.</li>
-              <li>Consectetur adipiscing elit, regra número dois.</li>
-              <li>Sed do eiusmod tempor, regra número três.</li>
-            </ol>
-          </div>
-        </section>
 
         <section class="janela" id="janela-lore" hidden>
           <header class="barra">
             <span class="titulo">♡ lore</span>
             <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
           </header>
-          <div class="corpo">
-            <h2>a lore do rpg</h2>
-            <p class="balao pequeno">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aqui vai a lore do RPG: como tudo começou e o que une todas as personagens.</p>
-            <p class="balao pequeno">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Segredos, mistérios, acontecimentos importantes...</p>
+          <div class="corpo" id="corpo-lore">
+            <article class="pagina" data-pagina="0">
+              <h2>pág 01 — FUNDAÇÃO IVORY HALL</h2>
+              <p class="balao pequeno"><span class="enfeite">✿─── ׂ ׅ</span> o início da herança Ivory Hall não se compara com que a universidade propõe agora. na verdade, se assemelha bastante, mas... ainda sim é diferente. então, vamos viajar no tempo?</p>
+              <p class="balao pequeno">nos meados dos anos de 2001, um sobrenome se ergueu perante a sociedade — os Falkenberg. e o que era "oculto", trouxe a sociedade impactos que influenciam até hoje o país inteiro. passado de pai para filho, a intuição surgiu em meio a renovação, algo que poderia "transformar a sociedade", adentrando com eles em mundo que não era grandemente explorado, mas ainda sim, todos conheciam o sobrenome na indústria.</p>
+              <p class="balao pequeno">com a idéia plantada, a Ivory Hall nasceu com principal instrutura, para fortalecer e criar novos atletas, financiando a eles ótimo ensino, onde o sistema esportivo quebraria qualquer resiliência da sociedade, entregando aos olímpicos, os melhores atletas e recordistas do Estado.</p>
+              <p class="balao pequeno">Konrad — o fundador— , então decidiu expandir a sua ideia inicial e, com o passar dos anos, o que era apenas foco em esportes, tornou-se algo muito grandioso, acolhendo filhos das mais grandes áreas de influência — seja qualquer uma delas.</p>
+            </article>
+            <article class="pagina" data-pagina="1" hidden>
+              <h2>pág 02 — CONSELHO ESTUDANTIL</h2>
+              <p class="balao pequeno"><span class="enfeite">✿─── ׂ ׅ</span> desde os primeiros anos da Ivory Hall, a participação dos estudantes tem um grande domínio para a diretoria. então, foi por causa disso que o Conselho Estudantil foi implantado no sistema — responsável por representar os alunos e servir como voz entre a comunidade estudantil e a administração.</p>
+              <p class="balao pequeno">além de, zelar pelos alunos, sempre renovando o ambiente para acolhe-los bem, como organizar eventos e projetos, o Conselho recebe sugestões, reclamações e propostas dos estudantes, levando para a superioridade discussões sobre questões que afetam diretamente a vida acadêmica.</p>
+              <p class="balao pequeno">embora sua autoridade não cubra todas as decisões, o Conselho sempre pode propor mudanças.</p>
+              <p class="balao pequeno">e foi assim, que o conselho tornou-se um dos principais espaços de participação estudantil dentro da Ivory Hall.</p>
+            </article>
+            <article class="pagina" data-pagina="2" hidden>
+              <h2>pág 03 — FRATERNIDADES</h2>
+              <p class="balao pequeno"><span class="enfeite">✿─── ׂ ׅ</span> assim que a universidade foi ampliada, seus horizontes expandiram igualmente, alunos das mais grandes influências destacando-se cada vez mais em suas áreas e, por incrível que pareça, disputando espaços entre em si, fazendo uma nova urgência surgir. com essa nova amplitude, Ivory Hall planta um novo projeto: as fraternidades. onde cada aluno poderia encaixar-se adequadamente a própria personalidade, acolhendo-se com os "seus".</p>
+              <p class="balao pequeno">para conhecer-las, dividiremos em 𝗯𝗹𝗮𝗰𝗸ridge e 𝘄𝗵𝗶𝘁𝗲haven, onde o lado B destaca-se alunos que não precisam manter o nome para ser quem eles são. já o lado W formam alunos que vivem para ditar, influenciar e deixar sua marca.</p>
+              <p class="balao pequeno">com cada lado unindo os extremos, a Ivory Hall tem maior diversidade de relevância em seu sistema, trazendo impacto — e um pouco de rivalidade — para demais instituições.</p>
+            </article>
+            <article class="pagina" data-pagina="3" hidden>
+              <h2>pág 04 — LÍDERES</h2>
+              <p class="balao pequeno"><span class="enfeite">✿─── ׂ ׅ</span> como parte da organização proposta por Konrad Falkenberg, a liderança ficou nas mãos de seus filhos: Asher Falkenberg Kiramman e Céleste Laurent Kiramman. onde Asher assumiu a Blackridge, trazendo consigo seu jeito direto, dinâmico e bem-humorado, além de uma liderança marcada pela proximidade e pelo sentimento de pertencimento.</p>
+              <p class="balao pequeno">Céleste, por sua vez, tornou-se a líder da Whitehaven. Curiosa, expansiva e apaixonada por conhecimento – especialmente por áreas como astronomia – ela trouxe à fraternidade uma liderança mais acolhedora e intelectual, sem deixar de lado sua personalidade naturalmente expressiva.</p>
+              <p class="balao pequeno">embora diferentes entre si, os dois ajudam a estabelecer a identidade de cada fraternidade, ajudando a acolher, transformando essa divisão em uma das características mais marcantes na Ivory Hall.</p>
+            </article>
           </div>
-        </section>
-
-        <section class="janela" id="janela-funciona" hidden>
-          <header class="barra">
-            <span class="titulo">♡ como funciona</span>
-            <button class="fechar" data-fechar aria-label="Fechar pasta">×</button>
-          </header>
-          <div class="corpo">
-            <h2>como vai funcionar</h2>
-            <p class="balao pequeno">Lorem ipsum dolor sit amet. Explique aqui como o RPG acontece: onde se joga, quem narra, como entrar, turnos, dados, frequência das sessões...</p>
-          </div>
+          <footer class="paginacao" aria-label="Páginas da lore">
+            <button type="button" class="pag-seta" id="pag-anterior" aria-label="Página anterior">‹</button>
+            <button type="button" class="pag-num ativa" data-ir="0">01</button>
+            <button type="button" class="pag-num" data-ir="1">02</button>
+            <button type="button" class="pag-num" data-ir="2">03</button>
+            <button type="button" class="pag-num" data-ir="3">04</button>
+            <button type="button" class="pag-seta" id="pag-proxima" aria-label="Próxima página">›</button>
+          </footer>
         </section>
 
         <form class="envio" id="envio" autocomplete="off">
